@@ -19,11 +19,15 @@ function Prediction(data) {
 }
 
 function _getForecast(data) {
-	var forecast = data.estado_cielo.find(forecast => forecast !== '');
+	var forecast = data.estado_cielo.find(forecast => forecast._ !== undefined);
+	forecast = {
+		value: forecast._,
+		description: forecast.$.descripcion,
+	};
 	delete forecast.periodo;
 	forecast.tmp = {
-		min: data.temperatura.minima,
-		max: data.temperatura.maxima
+		min: parseFloat(data.temperatura.minima),
+		max: parseFloat(data.temperatura.maxima)
 	};
 	return forecast;
 }

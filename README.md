@@ -99,7 +99,7 @@ or from [here](https://iagolast.github.io/pselect/)
 - `today`: Simplified forecast for the current day
 - `tomorrow`: Simplified forecast for the next today
 - `next2`: Simplified forecast for the day after tomorrow
-- `forecast`: array with the raw forecast values from the Aemet API
+- `forecast`: array with the raw forecast values from the Aemet API, the structure of this object will change to match the meteosapi.
 
 
 A `simplified forecast` has the following fields:
