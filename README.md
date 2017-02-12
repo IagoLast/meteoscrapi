@@ -1,4 +1,4 @@
-# METEOSAPI
+# METEOSCRAPI
 
 Formated Weather data obtained from the Aemet public webpage.
 
