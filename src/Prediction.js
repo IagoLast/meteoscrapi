@@ -4,7 +4,7 @@ function Prediction(data) {
   var forecast = data.prediccion.dia;
 
   var today = _getForecast(forecast[0]);
-  today.tmp.current = getCurrentTmp(forecast[0]);
+  today.tmp.current = getCurrentTmp(forecast[0].temperatura);
   var tomorrow = _getForecast(forecast[1]);
   var next2 = _getForecast(forecast[2]);
 
@@ -29,7 +29,6 @@ function _getForecast(data) {
   forecast.tmp = {
     min: parseFloat(data.temperatura.minima),
     max: parseFloat(data.temperatura.maxima),
-    current: getCurrentTmp(data.temperatura),
   };
   return forecast;
 }
