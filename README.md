@@ -102,55 +102,13 @@ or from [here](https://iagolast.github.io/pselect/)
 - `forecast`: array with the raw forecast values from the Aemet API, the structure of this object will change to match the meteosapi.
 
 
-A `simplified forecast` has the following fields:
-
-- `value`: The wheater forecast value.
-- `description`: User readable weather forecast description.
-- `tmp`: The temperature values for the day
-    - `min`: The expected min temperature 
-    - `max`: The expected max temperature 
-    
-
-Example response:
-
-```javascript
-{
-    name: 'Pontevedra',
-    province: 'Pontevedra',
-    today: {
-        value: '13',
-        descripcion: 'Intervalos nubosos',
-        tmp: {
-            min: 6,
-            max: 13
-        }
-    },
-    tomorrow: {
-        value: '13',
-        descripcion: 'Intervalos nubosos',
-        tmp: {
-            min: 5,
-            max: 16
-        }
-    },
-    next2: {
-        value: '25',
-        descripcion: 'Muy nuboso con lluvia',
-        tmp: {
-            min: 7,
-            max: 13
-        }
-    },
-    forecast: [forecastArray]
-}
-````
-
 #### List of meteo values and the meanings
 The value field in the simplified forecast can be one of the following, the `n` after the code comes from `night`.
 
 
     11 – Despejado
-    11n – Despejado noche 12 Poco nuboso
+    11n – Despejado noche
+    12 Poco nuboso
     12n – Poco nuboso noche
     13 – Intervalos nubosos
     13n – Intervalos nubosos noche
