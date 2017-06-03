@@ -1,41 +1,41 @@
 {
-	"name": "meteoscrapi",
-	"version": "1.0.2",
-	"description": "Formated Weather data obtained from the Aemet public webpage.",
-	"main": "src/index.js",
-	"directories": {
-		"test": "test"
-	},
-	"scripts": {
-		"test": "mocha",
-		"tdd": "mocha --watch"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/IagoLast/meteoscrapi.git"
-	},
-	"keywords": [
-		"weather",
-		"forecast",
-		"tiempo",
-		"meteorologia",
-		"aemet",
-		"meteosat",
-		"prediccion"
-	],
-	"author": "@iagolast",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/IagoLast/meteoscrapi/issues"
-	},
-	"homepage": "https://github.com/IagoLast/meteoscrapi#readme",
-	"dependencies": {
-		"iconv-lite": "^0.4.15",
-		"request": "^2.79.0",
-		"request-promise": "^4.1.1",
-		"xml2js": "^0.4.17"
-	},
-	"devDependencies": {
-		"mocha": "^3.2.0"
-	}
+  "name": "meteoscrapi",
+  "version": "1.1.0",
+  "description": "Formated Weather data obtained from the Aemet public webpage.",
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "tdd": "mocha --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IagoLast/meteoscrapi.git"
+  },
+  "keywords": [
+    "weather",
+    "forecast",
+    "tiempo",
+    "meteorologia",
+    "aemet",
+    "meteosat",
+    "prediccion"
+  ],
+  "author": "@iagolast",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IagoLast/meteoscrapi/issues"
+  },
+  "homepage": "https://github.com/IagoLast/meteoscrapi#readme",
+  "dependencies": {
+    "iconv-lite": "^0.4.15",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1",
+    "xml2js": "^0.4.17"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
 }
