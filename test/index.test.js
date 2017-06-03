@@ -12,7 +12,6 @@ describe('Meteosapi', () => {
       assert.notEqual(data.tomorrow, undefined, 'Data.tomorrow should be defined');
       assert.notEqual(data.next2, undefined, 'Data.next2 should be defined');
       assert.notEqual(data.forecast, undefined, 'Data. forecast be defined');
-      assert.notEqual(data.today.tmp.current, undefined, 'Data.today.tmp.current should be defined');
     });
   });
   it('should return the simplified wheather', () => {
@@ -23,7 +22,6 @@ describe('Meteosapi', () => {
       assert.notEqual(data.tomorrow, undefined, 'Data.tomorrow should be defined');
       assert.notEqual(data.next2, undefined, 'Data.next2 should be defined');
       assert.equal(data.forecast, undefined, 'Data.forecast should be defined');
-      assert.notEqual(data.today.tmp.current, undefined, 'Data.today.tmp.current should be defined');
     });
   });
 });

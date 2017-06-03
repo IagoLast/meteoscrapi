@@ -3,11 +3,9 @@ function Prediction(data) {
   var province = data.provincia;
   var forecast = data.prediccion.dia;
 
-  console.log('Today\n')
   var today = _getForecast(forecast[0]);
-  console.log('Tomorrow\n')
+  today.tmp.current = getCurrentTmp(forecast[0]);
   var tomorrow = _getForecast(forecast[1]);
-  console.log('NEXT2\n')
   var next2 = _getForecast(forecast[2]);
 
 
@@ -39,9 +37,6 @@ function _getForecast(data) {
 
 function getCurrentTmp(data) {
   var hour = new Date().getHours();
-  if (!data.dato) {
-    return (data.maxima + data.minima) / 2;
-  }
   if (hour <= 6) {
     return data.dato[0]['_'];
   }
