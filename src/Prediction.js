@@ -30,6 +30,7 @@ function _getForecast(data) {
     min: parseFloat(data.temperatura.minima),
     max: parseFloat(data.temperatura.maxima),
   };
+  forecast.rainProb = getCurrentRainProb(data.prob_precipitacion);
   return forecast;
 }
 
@@ -47,6 +48,25 @@ function getCurrentTmp(data) {
   }
   if (hour <= 24) {
     return data.dato[3]['_'];
+  }
+}
+
+function getCurrentRainProb(data) {
+  if (data[0]['_'] !== undefined) {
+    return data[0]['_'];
+  }
+  var hour = new Date().getHours();
+  if (hour <= 6) {
+    return data[3]['_'];
+  }
+  if (hour <= 12) {
+    return data[4]['_'];
+  }
+  if (hour <= 18) {
+    return data[5]['_'];
+  }
+  if (hour <= 24) {
+    return data[6]['_'];
   }
 }
 
