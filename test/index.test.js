@@ -12,6 +12,9 @@ describe('Meteosapi', () => {
       assert.notEqual(data.tomorrow, undefined, 'Data.tomorrow should be defined');
       assert.notEqual(data.next2, undefined, 'Data.next2 should be defined');
       assert.notEqual(data.forecast, undefined, 'Data. forecast be defined');
+      assert.notEqual(data.today.rainProb, undefined, 'Rain probability should be defined for today');
+      assert.notEqual(data.tomorrow.rainProb, undefined, 'Rain probability should be defined for tomorrow');
+      assert.notEqual(data.next2.rainProb, undefined, 'Rain probability should be defined for next2');
     });
   });
   it('should return the simplified wheather', () => {
@@ -23,6 +26,8 @@ describe('Meteosapi', () => {
       assert.notEqual(data.next2, undefined, 'Data.next2 should be defined');
       assert.equal(data.forecast, undefined, 'Data.forecast should be defined');
       assert.notEqual(data.today.rainProb, undefined, 'Rain probability should be defined for today');
+      assert.notEqual(data.tomorrow.rainProb, undefined, 'Rain probability should be defined for tomorrow');
+      assert.notEqual(data.next2.rainProb, undefined, 'Rain probability should be defined for next2');
     });
   });
 });

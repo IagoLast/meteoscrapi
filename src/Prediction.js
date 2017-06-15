@@ -52,22 +52,7 @@ function getCurrentTmp(data) {
 }
 
 function getCurrentRainProb(data) {
-  if (data[0]['_'] !== undefined) {
-    return data[0]['_'];
-  }
-  var hour = new Date().getHours();
-  if (hour <= 6) {
-    return data[3]['_'];
-  }
-  if (hour <= 12) {
-    return data[4]['_'];
-  }
-  if (hour <= 18) {
-    return data[5]['_'];
-  }
-  if (hour <= 24) {
-    return data[6]['_'];
-  }
+  return data.find(data => data['_'] !== undefined)['_'];
 }
 
 module.exports = Prediction;
